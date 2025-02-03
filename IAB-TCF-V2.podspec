@@ -16,7 +16,12 @@ Pod::Spec.new do |spec|
     :git => "git@github.com:renswijnmalen/IAB-TCF-V2-Objective-C-test.git",
   }
   
-  spec.source_files  = 'Sources/**/*.swift'
+  # Gebruik de juiste paden voor source files
+  spec.source_files  = 'IAB-TCF-V2/**/*.{h,m}'
+  
+  spec.public_header_files = 'IAB-TCF-V2/**/*.h'
+  
+  spec.requires_arc = true
   
   spec.swift_versions = ['5.0']
 end
